@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  text-align: center;
+}
+
+.app-logo {
+  animation: app-logo-spin infinite 5s linear;
+  height: 80px;
+}
+
+.app-header {
+  background-color: #222;
+  min-height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.button {
+  font-weight: 500;
+  letter-spacing: .2px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: #0272b6;
+  border: 0;
+  height: 48px;
+  padding: 0 2em;
+  border-radius: 3ex;
+}
+
+.button:hover {
+  background-color: #60dafb;
+  color: #0272b6;
+}
+
+@keyframes app-logo-spin {
+  0% { transform: rotate(395deg); }
+  25% { transform: rotate(315deg); }
+  50% { transform: rotate(395deg); }
+  75% { transform: rotate(315deg); }
+  100% { transform: rotate(395deg); }
+}

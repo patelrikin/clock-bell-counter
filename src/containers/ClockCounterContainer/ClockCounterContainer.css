@@ -1,0 +1,26 @@
+.clock-container {
+  position: relative;
+}
+
+.time-containers {
+  display: flex;
+  justify-content: center;
+}
+
+.time-containers label {
+  padding-right: 10px;
+}
+
+.time-containers input {
+  padding: 5px;
+}
+
+.start-time-container {
+}
+
+.end-time-container {
+}
+
+.error {
+  color: red;
+}
