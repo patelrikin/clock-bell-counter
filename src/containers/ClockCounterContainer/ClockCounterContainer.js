@@ -12,14 +12,12 @@ class ClockCounterContainer extends Component {
     };
   }
 
-  updateDisplay = bellCount => this.setState({ bellCount });
-
-  // Removes all non-digits character except pattern
-  sanitizeUserInput = val => val.trim().replace(/[^\d:,-\s]/g, '');
+  // Removes all non-digits character except ':' literal
+  sanitizeUserInput = val => val.trim().replace(/[^\d:]/g, '');
 
   isValid = val => {
     let [result, hour, , minute] =
-      this.sanitizeUserInput(val).match(/^(\d{1,2})([:,-\s]{1})(\d{2})$/) || []; // https://regex101.com/r/sxzzNg/2/
+      this.sanitizeUserInput(val).match(/^(\d{1,2})([:]{1})(\d{2})$/) || []; // https://regex101.com/r/sxzzNg/2/
     return result
       ? isValidHour(hour) && isValidMinute(minute)
       : false;
@@ -31,11 +29,14 @@ class ClockCounterContainer extends Component {
     return this.updateInputErrorState(target.name, this.isValid(target.value));
   };
 
+  updateDisplay = bellCount => this.setState({ bellCount });
+
   handleSubmit = e => {
     e.preventDefault();
     if (!(this.state.validSTART && this.state.validEND)) return;
-    var startTime = document.querySelector("input[name='start']").value;
-    var endTime = document.querySelector("input[name='end']").value;
+
+    let startTime = document.querySelector("input[name='start']").value;
+    let endTime = document.querySelector("input[name='end']").value;
 
     let result = calculateRingsBetweenTime(startTime, endTime);
     this.updateDisplay(result);
@@ -54,7 +55,6 @@ class ClockCounterContainer extends Component {
                 placeholder="HH:MM"
                 required
                 onBlur={this.validateUserInput}
-                // onBlur={(e) => this.validateUserInput(e, "StartTime")}
               />
               {!this.state.validSTART && (
                 <p className="error">Invalid Start Time.</p>

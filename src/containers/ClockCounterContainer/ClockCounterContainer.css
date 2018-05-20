@@ -5,6 +5,7 @@
 .time-containers {
   display: flex;
   justify-content: center;
+  min-height: 150px;
 }
 
 .time-containers label {
@@ -23,4 +24,5 @@
 
 .error {
   color: red;
+  margin: 10px;
 }

@@ -2,20 +2,23 @@ export const validateHours = hours => hours > -1 && hours < 24;
 
 export const validateMinutes = minutes => minutes > -1 && minutes < 60;
 
-export const isValidHour = hour => (
-  (hour = Number(hour)), validateHours(hour)
-);
+export const isValidHour = hour => {
+  hour = Number(hour);
+  return validateHours(hour)
+};
 
-export const isValidMinute = minute => (
-  (minute = Number(minute)), validateMinutes(minute)
-);
+export const isValidMinute = minute => {
+  minute = Number(minute);
+  return validateMinutes(minute)
+};
 
 export const shouldRing = minutes => minutes === 0;
 
 export const skipCurrentHour = hours => (hours === 23 ? 0 : hours + 1);
 
 export const getNormalizedHour = hours => {
-  return hours = Number(hours), (hours > 12 ? hours - 12 : hours === 0 ? 12 : hours);
+  hours = Number(hours);
+  return (hours > 12 ? hours - 12 : hours === 0 ? 12 : hours);
 }
 
 export const getTimeObject = (timeString = '') => {
@@ -50,6 +53,16 @@ export const calculateRingsBetweenTime = (startString, endString) => {
   let hoursBetween = endTimeObj.hours - startTimeObj.hours;
 
   if (hoursBetween === 0) { // OR just do falsy check, !hoursBetween
+    let startMinute = startTimeObj.minutes;
+    let endMinute = endTimeObj.minutes;
+
+    if (endMinute > startMinute) {
+      if (!shouldRing(startMinute)) // Within same hour range, no rings in such case.
+        return 0;
+      else                          // 1:00 to 1:12, 1:00 should Ring
+        return getNormalizedHour(startTimeObj.hours);
+    }
+
     // Case when both hours are same, go manual no need to use user data
     return countRings(0, 11) * 2;
   }

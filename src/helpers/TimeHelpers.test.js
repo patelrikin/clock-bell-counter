@@ -107,6 +107,24 @@ describe('calculateRingsBetweenTime', () => {
     });
   });
 
+  it(`should calculate rings between same hour cycle as zero if endTime minute is greater than startTime minute`, () => {
+    expect(calculateRingsBetweenTime('01:09', '01:10')).toBe(0);
+    twentyFourHoursArray.map(hour => {
+      expect(calculateRingsBetweenTime(`${hour}:20`, `${hour}:23`)).toBe(0);
+    });
+  });
+
+  it(`should calculate rings at the hour if startTime minute is 00 and endTime minute is greater than startTime minute`, () => {
+    expect(calculateRingsBetweenTime('00:00', '00:01')).toBe(12);
+    expect(calculateRingsBetweenTime('01:00', '01:01')).toBe(1);
+    expect(calculateRingsBetweenTime('13:00', '13:01')).toBe(1);
+    expect(calculateRingsBetweenTime('23:00', '23:01')).toBe(11);
+  });
+
+  it(`should calculate rings in 24 hours cycle scenario`, () => {
+    expect(calculateRingsBetweenTime('01:10', '01:00')).toBe(156);
+  });
+
   it('should count 2 bells between 1:10 - 2:20', () => {
     expect(calculateRingsBetweenTime('01:10', '02:20')).toBe(rangeCounter([2]));
   });
