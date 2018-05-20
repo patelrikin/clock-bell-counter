@@ -53,8 +53,17 @@ export const calculateRingsBetweenTime = (startString, endString) => {
   let hoursBetween = endTimeObj.hours - startTimeObj.hours;
 
   if (hoursBetween === 0) { // OR just do falsy check, !hoursBetween
+    let startMinute = startTimeObj.minutes;
+    let endMinute = endTimeObj.minutes;
+
+    if (endMinute > startMinute) {
+      if (!shouldRing(startMinute)) // Within same hour range, no rings in such case.
+        return 0;
+      else                          // 1:00 to 1:12, 1:00 should Ring
+        return getNormalizedHour(startTimeObj.hours);
+    }
+
     // Case when both hours are same, go manual no need to use user data
-    // TODO: validate minutes
     return countRings(0, 11) * 2;
   }
 
