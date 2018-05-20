@@ -1,6 +1,6 @@
 # Clock Bell Counter App
 
-Deployed here: [https://clock-bell-counter.netlify.com/]
+Deployed here: https://clock-bell-counter.netlify.com/
 
 ##  `yarn start`
     Starts the development server.
