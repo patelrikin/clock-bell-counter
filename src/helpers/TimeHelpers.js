@@ -2,20 +2,23 @@ export const validateHours = hours => hours > -1 && hours < 24;
 
 export const validateMinutes = minutes => minutes > -1 && minutes < 60;
 
-export const isValidHour = hour => (
-  (hour = Number(hour)), validateHours(hour)
-);
+export const isValidHour = hour => {
+  hour = Number(hour);
+  return validateHours(hour)
+};
 
-export const isValidMinute = minute => (
-  (minute = Number(minute)), validateMinutes(minute)
-);
+export const isValidMinute = minute => {
+  minute = Number(minute);
+  return validateMinutes(minute)
+};
 
 export const shouldRing = minutes => minutes === 0;
 
 export const skipCurrentHour = hours => (hours === 23 ? 0 : hours + 1);
 
 export const getNormalizedHour = hours => {
-  return hours = Number(hours), (hours > 12 ? hours - 12 : hours === 0 ? 12 : hours);
+  hours = Number(hours);
+  return (hours > 12 ? hours - 12 : hours === 0 ? 12 : hours);
 }
 
 export const getTimeObject = (timeString = '') => {
