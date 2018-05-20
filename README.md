@@ -1,6 +1,6 @@
 # Clock Bell Counter App
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Deployed here: [https://clock-bell-counter.netlify.com/]
 
 ##  `yarn start`
     Starts the development server.
@@ -11,6 +11,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##  `yarn test`
     Starts the test runner.
 
+##  `yarn test --coverage`
+    Runs the test runner and outputs coverage.
+
 ##  `yarn eject`
     Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
