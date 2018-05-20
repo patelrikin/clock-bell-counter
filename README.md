@@ -1,5 +1,7 @@
 # Clock Bell Counter App
 
+[![Build Status](https://travis-ci.org/patelrikin/clock-bell-counter.svg?branch=master)](https://travis-ci.org/patelrikin/clock-bell-counter)
+
 Deployed here: https://clock-bell-counter.netlify.com/
 
 Assuming `yarn` is installed on your machine you can use following commands. If not then run `npm` equivalent commands found here: https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison
