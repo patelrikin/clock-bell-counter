@@ -19,3 +19,7 @@ Deployed here: [https://clock-bell-counter.netlify.com/]
     and scripts into the app directory. If you do this, you can’t go back!
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+## Known Issues
+
+- Currently do not validate minutes if same hour input is provided. Output should be 0 in such case.

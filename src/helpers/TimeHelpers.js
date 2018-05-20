@@ -54,6 +54,7 @@ export const calculateRingsBetweenTime = (startString, endString) => {
 
   if (hoursBetween === 0) { // OR just do falsy check, !hoursBetween
     // Case when both hours are same, go manual no need to use user data
+    // TODO: validate minutes
     return countRings(0, 11) * 2;
   }
 
