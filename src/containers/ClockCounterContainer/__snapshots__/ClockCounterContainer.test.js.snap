@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClockCounterContainer should have rendered 1`] = `
+<div
+  className="clock-container p-20"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="time-containers p-20"
+    >
+      <div
+        className="start-time-container p-20"
+      >
+        <label
+          htmlFor="start"
+        >
+          Start Time:
+        </label>
+        <input
+          name="start"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="end-time-container p-20"
+      >
+        <label
+          htmlFor="end"
+        >
+          End Time:
+        </label>
+        <input
+          name="end"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <input
+      className="button"
+      type="submit"
+    />
+  </form>
+  <p>
+    
+  </p>
+</div>
+`;
+
+exports[`ClockCounterContainer should have rendered using rendered() 1`] = `
+<div
+  className="clock-container p-20"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="time-containers p-20"
+    >
+      <div
+        className="start-time-container p-20"
+      >
+        <label
+          htmlFor="start"
+        >
+          Start Time:
+        </label>
+        <input
+          name="start"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="end-time-container p-20"
+      >
+        <label
+          htmlFor="end"
+        >
+          End Time:
+        </label>
+        <input
+          name="end"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <input
+      className="button"
+      type="submit"
+    />
+  </form>
+  <p>
+    
+  </p>
+</div>
+`;
+
+exports[`ClockCounterContainer should have rendered using renderer() 1`] = `
+<div
+  className="clock-container p-20"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="time-containers p-20"
+    >
+      <div
+        className="start-time-container p-20"
+      >
+        <label
+          htmlFor="start"
+        >
+          Start Time:
+        </label>
+        <input
+          name="start"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="end-time-container p-20"
+      >
+        <label
+          htmlFor="end"
+        >
+          End Time:
+        </label>
+        <input
+          name="end"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <input
+      className="button"
+      type="submit"
+    />
+  </form>
+  <p>
+    
+  </p>
+</div>
+`;
+
+exports[`ClockCounterContainer should have rendered using renderer() 2`] = `
+<div
+  className="clock-container p-20"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="time-containers p-20"
+    >
+      <div
+        className="start-time-container p-20"
+      >
+        <label
+          htmlFor="start"
+        >
+          Start Time:
+        </label>
+        <input
+          name="start"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="end-time-container p-20"
+      >
+        <label
+          htmlFor="end"
+        >
+          End Time:
+        </label>
+        <input
+          name="end"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <input
+      className="button"
+      type="submit"
+    />
+  </form>
+  <p>
+    
+  </p>
+</div>
+`;
+
+exports[`should have rendered 1`] = `
+<div
+  className="clock-container p-20"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="time-containers p-20"
+    >
+      <div
+        className="start-time-container p-20"
+      >
+        <label
+          htmlFor="start"
+        >
+          Start Time:
+        </label>
+        <input
+          name="start"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="end-time-container p-20"
+      >
+        <label
+          htmlFor="end"
+        >
+          End Time:
+        </label>
+        <input
+          name="end"
+          onBlur={[Function]}
+          placeholder="HH:MM"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <input
+      className="button"
+      type="submit"
+    />
+  </form>
+  <p>
+    
+  </p>
+</div>
+`;
